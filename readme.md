@@ -14,6 +14,8 @@ On the other hand it's undeniably harder to use, and the network stack isn't as 
 
 To get started with Turbo Intruder, please refer to the video and documentation at https://portswigger.net/blog/turbo-intruder-embracing-the-billion-request-attack
 
+For a consolidated usage index covering Quickstart, Burp usage, CLI, API, engines, advanced techniques, HTTP/2 specifics, performance tuning, troubleshooting, and recipes, see `docs/index.md`.
+
 
 #### Development
 Build using:

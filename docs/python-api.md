@@ -1,0 +1,24 @@
+# Python API
+
+- Decorators to match/filter:
+  - `MatchStatus(*codes)`, `FilterStatus(*codes)` (resources/ScriptEnvironment.py:12–18, 70–77).
+  - `MatchRegex(regex)`, `FilterRegex(regex)` (resources/ScriptEnvironment.py:3–11, 88–95).
+  - `MatchSize`, `MatchSizeRange`, `FilterSize`, `FilterSizeRange` (resources/ScriptEnvironment.py:20–34, 79–86, 97–104).
+  - `MatchWordCount`, `MatchWordCountRange`, and `UniqueWordCount(instances)` (resources/ScriptEnvironment.py:36–50, 115–121, 144–171).
+  - `MatchLineCount`, `MatchLineCountRange`, `UniqueLineCount(instances)` (resources/ScriptEnvironment.py:52–68, 124–141, 173–201).
+  - `UniqueSize(instances)` (resources/ScriptEnvironment.py:203–231).
+- Helpers:
+  - `randstr(length=12, allow_digits=True)`; `mean(data)`, `stddev(data)` (resources/ScriptEnvironment.py:233–247).
+- Engine enum: `Engine.BURP`, `Engine.THREADED`, `Engine.HTTP2`, `Engine.BURP2`, `Engine.SPIKE` (resources/ScriptEnvironment.py:258–264).
+- RequestEngine constructor:
+  - Key params: `concurrentConnections`, `requestsPerConnection`, `pipeline`, `timeout`, `maxRetriesPerRequest`, `idleTimeout`, `readCallback`, `readSize`, `resumeSSL`, `autoStart` (resources/ScriptEnvironment.py:267–307).
+  - BURP engines force `requestsPerConnection=1` and disable pipelining; no `readCallback` (resources/ScriptEnvironment.py:281–286).
+- Queueing parameters:
+  - `payloads` (single or list), `learn`, per-request `callback`, `gate`, `label`, `pauseBefore`, `pauseTime`, `pauseMarker`, `delay`, `endpoint`, `fixContentLength` (src/RequestEngine.kt:93–131).
+- Control methods:
+  - `openGate(name)` (resources/ScriptEnvironment.py:317–319).
+  - `applySetting(name, value)`; e.g. `ignoreLength` for THREADED (src/RequestEngine.kt:428–434; src/ThreadedRequestEngine.kt:28–30).
+  - `start(timeout)`, `complete(timeout)`, `cancel()` (resources/ScriptEnvironment.py:323–335).
+- Wordlists object:
+  - `bruteforce` generator; `observedWords` from Proxy; `clipboard` (src/fast-http.kt:58–73).
+  - Indefinite brute-force example using generator (resources/ScriptEnvironment.py:249–257).
