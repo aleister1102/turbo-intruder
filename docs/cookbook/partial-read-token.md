@@ -2,7 +2,7 @@
 
 - Capture tokens from partial socket reads using `readCallback` (resources/examples/partialReadCallback.py).
 
-```
+```python
 engine = RequestEngine(endpoint=target.endpoint,
                        concurrentConnections=2,
                        readCallback=handleRead,

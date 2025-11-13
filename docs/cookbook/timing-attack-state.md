@@ -2,7 +2,7 @@
 
 - Use labels and `engine.userState` to compare timings (resources/examples/timingAttackWithState.py).
 
-```
+```python
 engine.userState['base_times'] = []
 for i in range(20):
     engine.queue(target.req, randstr(i), label='benchmark')

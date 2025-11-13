@@ -2,7 +2,7 @@
 
 - Queue mixed methods and paths, then open the gate (resources/examples/race-multi-endpoint.py).
 
-```
+```python
 req1 = r'''GET /static/robots.txt?%s=test HTTP/1.1
 Host: hackxor.net
 

@@ -3,7 +3,7 @@
 - Use `Engine.THREADED` with a wordlist (resources/examples/basic.py).
 - Key lines:
 
-```
+```python
 engine = RequestEngine(endpoint=target.endpoint,
                        concurrentConnections=5,
                        requestsPerConnection=100,

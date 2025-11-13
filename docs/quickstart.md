@@ -4,7 +4,7 @@
 - Script shape: define `queueRequests(target, wordlists)` and `handleResponse(req, interesting)`.
 - Minimal example:
 
-```
+```python
 def queueRequests(target, wordlists):
     engine = RequestEngine(endpoint=target.endpoint,
                            concurrentConnections=5,

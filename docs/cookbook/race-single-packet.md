@@ -2,7 +2,7 @@
 
 - For HTTP/2 targets, use `Engine.BURP2` with gates (resources/examples/race-single-packet-attack.py).
 
-```
+```python
 engine = RequestEngine(endpoint=target.endpoint,
                        concurrentConnections=1,
                        engine=Engine.BURP2)
