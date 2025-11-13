@@ -20,4 +20,4 @@ def handleResponse(req, interesting):
 
 - Run: click `Attack` in the Turbo Intruder window (src/fast-http.kt:364–441).
 - See results: requests appear in the table; status shows RPS and progress (src/RequestEngine.kt:354–365).
-- Alternative: use CLI if not in Burp; see `usage-cli.md`.
+- Alternative: use CLI if not in Burp; see [CLI Usage](usage-cli.md).
